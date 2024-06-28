@@ -1,9 +1,10 @@
 package Ej_2_6_3.definition;
 
 public interface Queue {
-    void enqueue(int element);
-    int dequeue();
+    void anadir(int element);
+    int eliminar();
     int front();
-    boolean isEmpty();
     int size();
+    boolean vacio();
 }
+

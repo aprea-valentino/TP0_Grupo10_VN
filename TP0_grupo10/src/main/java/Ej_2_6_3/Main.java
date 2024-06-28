@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
         Queue cola = new DinamicCicQueue();
 
-        cola.enqueue(2);
-        cola.enqueue(3);
+        cola.anadir(2);
+        cola.anadir(3);
 
         System.out.println(cola.front());
-        cola.dequeue();
+        cola.eliminar();
         System.out.println(cola.front());
 
 

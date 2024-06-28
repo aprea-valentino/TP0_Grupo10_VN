@@ -1,69 +1,76 @@
 package Ej_2_6_3.implementation.ej2_6_3;
 
 import Ej_2_6_3.definition.Queue;
-import Ej_2_6_3.implementation.dynamic.nodes.Node;
+import Ej_2_6_3.implementation.nodes.Nodo;
 
 public class DinamicCicQueue implements Queue {
-    private Node last;
-    private int size;
+    private Nodo ult; // Último nodo en la queue
+    private int count;  // Tamaño de la cola
 
     public DinamicCicQueue() {
-        this.last = null;
-        this.size = 0;
+        this.ult = null;
+        this.count = 0;
     }
 
+    // Añade un elemento al final de la Queue
+
     @Override
-    public void enqueue(int element) {
-        Node newNode = new Node(element, null, null);
-        if (this.isEmpty()) {
-            newNode.setNext(newNode);
-            newNode.setPrevious(newNode);
+    public void anadir(int element) {
+        Nodo newNodo = new Nodo(element, null, null);
+        if (this.vacio()) {
+            newNodo.setNext(newNodo);
+            newNodo.setPrevious(newNodo);
         } else {
-            newNode.setNext(this.last.getNext());
-            newNode.setPrevious(this.last);
-            this.last.setNext(newNode);
-            newNode.getNext().setPrevious(newNode);
+            newNodo.setNext(this.ult.getNext());
+            newNodo.setPrevious(this.ult);
+            this.ult.setNext(newNodo);
+            newNodo.getNext().setPrevious(newNodo);
         }
-        this.last = newNode;
-        this.size++;
+        this.ult = newNodo;
+        this.count++;
     }
 
+    // Elimina y devuelve el elemento al frente de la Queue
     @Override
-    public int dequeue() {
-        if (this.isEmpty()) {
-            throw new RuntimeException("La cola esta vacia");
+    public int eliminar() {
+        if (this.vacio()) {
+            throw new RuntimeException("La cola está vacía");
         }
 
-        Node frontNode = this.last.getNext();
-        int element = frontNode.getValue();
+        Nodo nodoFront = this.ult.getNext();
+        int element = nodoFront.getValue();
 
-        if (this.size == 1) {
-            this.last = null;
+        if (this.count == 1) {
+            this.ult = null;
         } else {
-            this.last.setNext(frontNode.getNext());
-            frontNode.getNext().setPrevious(this.last);
+            this.ult.setNext(nodoFront.getNext());
+            nodoFront.getNext().setPrevious(this.ult);
         }
 
-        this.size--;
+        this.count--;
         return element;
     }
 
+    // Devuelve el elemento al frente de la Queue
     @Override
     public int front() {
-        if (this.isEmpty()) {
-            throw new RuntimeException("La cola esta vacia");
+        if (this.vacio()) {
+            throw new RuntimeException("La cola está vacía");
         }
 
-        return this.last.getNext().getValue();
+        return this.ult.getNext().getValue();
     }
 
+    // Verifica si la cola está vacía
     @Override
-    public boolean isEmpty() {
-        return this.last == null;
+    public boolean vacio() {
+        return this.ult == null;
     }
 
+    // Devuelve el tamaño de la cola
     @Override
     public int size() {
-        return this.size;
+        return this.count;
     }
 }
+

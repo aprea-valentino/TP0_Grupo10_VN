@@ -44,6 +44,7 @@ public class QueueOfQueue implements IQoQ{
     }
 
     @Override
+    //Ej 2_3_1 Autor: Valentino Aprea
     public void concatenate(IQoQ queve) {
         while(!queve.isEmpty()){
             IQueve qo = new QueveGenerico<>();
@@ -55,6 +56,7 @@ public class QueueOfQueue implements IQoQ{
     }
 
     @Override
+    // Ej 2_3_2 Autor: Mauricio Antolin
     public void flat() {
         IQueve<Object> aux = new QueveGenerico<>();
         while(!isEmpty()){
@@ -69,6 +71,7 @@ public class QueueOfQueue implements IQoQ{
     }
 
     @Override
+    //Ej 2_3_3 Autor: Valentino Aprea
     public void reverseWithDepth() {
         IStack<Object> aux = new Stack<>();
         while(!isEmpty()){

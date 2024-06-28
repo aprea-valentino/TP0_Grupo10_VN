@@ -6,7 +6,7 @@ import Ej_2_5Montecarlo.model.Montecarlo;
 import java.util.Random;
 
 public class Main {
-
+    //Autor: Valentino Aprea
     public static void main(String[] args) {
 
         Montecarlo montecarlo = new Montecarlo();

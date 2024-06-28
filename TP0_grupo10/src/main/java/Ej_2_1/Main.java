@@ -158,7 +158,7 @@ public class Main {
 
 
 
-    // Ejercicio 2_1_1
+    // Ejercicio 2_1_1 Autor: Adriel Bergantino
     public static int calcularTraza(IQueveOfStacks queveOfStacks) {
         int traza = 0;
         int index = 0;
@@ -177,7 +177,7 @@ public class Main {
 
         return traza;
     }
-    // Ejercicio 2_1_2
+    // Ejercicio 2_1_2 Autor: Aprea Valentino
     public static IQueveOfStacks traspuesta(IQueveOfStacks queveOfStacks){
         int size = getSizeQOS(queveOfStacks);
         IQueveOfStacks res = new QueveOfStack();
@@ -206,7 +206,7 @@ public class Main {
         }
         return res;
     }
-
+     // Ejercicio 2_1_3 Autor: Mauricio Antolin
     public static IQueveOfStacks sumaMatricial(IQueveOfStacks qos1, IQueveOfStacks qos2){
         IQueveOfStacks res = new QueveOfStack();
         IQueveOfStacks copy1 = copyQOS(qos1);

@@ -8,7 +8,7 @@ import Ej_2_5_1.utils.StackUtil;
 import java.util.Random;
 
 
-
+//Autor: Valentino Apera
 public class Main {
     public static void main(String[] args) {
 

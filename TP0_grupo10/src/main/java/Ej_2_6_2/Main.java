@@ -6,6 +6,7 @@ import Ej_2_6_2.model.StaticSet;
 import Ej_2_6_2.model.SuperSet;
 
 public class Main {
+    //Autor: Adriel Bergantino
     public static void main(String[] args) {
         ISuperSet superSet = new SuperSet();
         for (int i = 1; i <= 10; i++) {

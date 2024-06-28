@@ -18,7 +18,7 @@ public class Main {
         System.out.println(stackGen.getTop());
 
     }
-    // invertir stack generico ej 2_2_1
+    // invertir stack generico ej 2_2_1 Autor: Valentino Aprea
     public static IStack<Object> invertir(IStack<Object> stack){
         IStack<Object> aux = new StackGenerico<>();
         while(!stack.isEmpty()){
@@ -28,7 +28,7 @@ public class Main {
 
         return aux;
     }
-    // Ejercicio 2_2_2
+    // Ejercicio 2_2_2 Autor: Adriel Bergantino
     public static ISet<Object> copySet(ISet<Object> set){
         ISet<Object> aux = new Set<>();
         ISet<Object> aux2 = new Set<>();

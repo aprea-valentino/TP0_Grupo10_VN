@@ -8,6 +8,7 @@ import Ej_2_4.model.IStack;
 import Ej_2_4.model.ISet;
 
 public class Main {
+    //Autor: Adriel Bergantino
     public static void main(String[] args) {
         Set.SetBuilder<Integer> setBuilder = new Set.SetBuilder<>();
         ISet<Integer> set = setBuilder.add(1).add(2).add(3).build();

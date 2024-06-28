@@ -4,6 +4,7 @@ import Ej_2_7_1.model.PriorityQueue;
 import Ej_2_7_1.model.StaticPriorityQueue;
 
 public class Main {
+    //Autor: Valentino Aprea
     public static void main(String[] args) {
         PriorityQueue cola = new StaticPriorityQueue();
 

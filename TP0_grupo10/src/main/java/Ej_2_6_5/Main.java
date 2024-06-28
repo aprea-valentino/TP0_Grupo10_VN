@@ -3,6 +3,7 @@ package Ej_2_6_5;
 import Ej_2_6_5.model.RandomDictionary;
 
 public class Main {
+    //Autor: Mauricio Antolin
     public static void main(String[] args) {
         RandomDictionary randomDict = new RandomDictionary();
 

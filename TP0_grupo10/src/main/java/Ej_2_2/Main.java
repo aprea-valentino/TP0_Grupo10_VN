@@ -17,9 +17,6 @@ public class Main {
         stackGen = invertir(stackGen);
         System.out.println(stackGen.getTop());
 
-
-
-
     }
     // invertir stack generico ej 2_2_1
     public static IStack<Object> invertir(IStack<Object> stack){
@@ -31,7 +28,27 @@ public class Main {
 
         return aux;
     }
+    // Ejercicio 2_2_2
+    public static ISet<Object> copySet(ISet<Object> set){
+        ISet<Object> aux = new Set<>();
+        ISet<Object> aux2 = new Set<>();
 
+
+        while(!set.isEmpty()) {
+            Object n = set.choose();
+            aux.add(n);
+            aux2.add(n);
+            set.remove(n);
+        }
+
+        while(!aux.isEmpty()) {
+            Object n = aux.choose();
+            set.add(n);
+            aux.remove(n);
+        }
+
+        return aux2;
+    }
 
 }
 

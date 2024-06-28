@@ -76,6 +76,20 @@ public class Utils {
         return queve;
     }
 
+    public static IQueve flat(IQoQ QoQ) {
+        IQoQ copy = copyQOQ(QoQ);
+        IQueve res = new QueveGenerico<>();
+        while (!copy.isEmpty()) {
+            IQueve temp = copy.getFirts();
+            while (!temp.isEmpty()) {
+                res.add(temp.getFirts());
+                temp.remove();
+            }
+            copy.remove();
+        }
+        return res;
+    }
+
 
 
 }

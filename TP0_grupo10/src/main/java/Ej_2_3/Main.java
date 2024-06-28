@@ -24,8 +24,11 @@ public class Main {
         colacola1.add(queve);
         colacola.concatenate(colacola1);
         Utils.print(colacola);
+
         colacola.reverseWithDepth();
         Utils.print(colacola);
 
+        colacola.flat();
+        Utils.print(colacola);
     }
 }

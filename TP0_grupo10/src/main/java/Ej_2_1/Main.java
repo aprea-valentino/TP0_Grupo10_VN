@@ -15,6 +15,7 @@ public class Main {
         IQueveOfStacks queveOfStacks = genQOS(n);
         printQOS(queveOfStacks);
 
+        System.out.println(calcularTraza(queveOfStacks));
 
 
         queveOfStacks = traspuesta(queveOfStacks);
@@ -157,7 +158,25 @@ public class Main {
 
 
 
+    // Ejercicio 2_1_1
+    public static int calcularTraza(IQueveOfStacks queveOfStacks) {
+        int traza = 0;
+        int index = 0;
 
+        IQueveOfStacks aux = copyQOS(queveOfStacks);
+
+        while (!aux.isEmpty()) {
+            IStack col = aux.getFirtsCol();
+            for(int i = 0; i < index; i++){
+                col.remove();
+            }
+            traza += col.getTop();
+            index++;
+            aux.remove();
+        }
+
+        return traza;
+    }
     // Ejercicio 2_1_2
     public static IQueveOfStacks traspuesta(IQueveOfStacks queveOfStacks){
         int size = getSizeQOS(queveOfStacks);

@@ -18,7 +18,12 @@ public class Main {
         System.out.println(superSet.esSubconjunto(set));
 
         Set Complemento = superSet.Complemento(set);
-        System.out.println(Complemento.choose());
+        while(!Complemento.isEmpty()) {
+            int aux = Complemento.choose();
+            System.out.println(aux);
+            Complemento.remove(aux);
+        }
+
 
     }
 }

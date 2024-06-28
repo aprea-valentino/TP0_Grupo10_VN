@@ -56,6 +56,15 @@ public class QueueOfQueue implements IQoQ{
 
     @Override
     public void flat() {
+        IQueve<Object> aux = new QueveGenerico<>();
+        while(!isEmpty()){
+            while(!getFirts().isEmpty()){
+                aux.add(getFirts().getFirts());
+                getFirts().remove();
+            }
+            remove();
+        }
+        add(aux);
 
     }
 
